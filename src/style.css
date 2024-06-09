@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "Inter";
+    src: url('../src/fonts/Inter/static/Inter-Bold.ttf') format("truetype");
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url('../src/fonts/Nunito_Sans/static/NunitoSans_10pt-Bold.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+:root {
+    --color: #1f2937;
+    --container-color: #d4d4d8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.main {
+    display: grid;
+    height: 100vh;
+    grid-template: 1fr 1fr 2fr / 1fr 2fr 1fr;
+}
+
+.navigation {
+    grid-row: 1 / 4;
+    background-color: var(--color);
+}
+
+.navigation .dashboard {
+    margin: 8px;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.dashboard img {
+    margin-left: 8px;
+    height: 60px;
+}
+
+.dashboard h1, h2 {
+    margin-top: 0.5em;
+    margin-left: 8px;
+    font-family: "Inter";
+    color: white;
+}
+
+.item {
+    display: flex;
+}
+
+.item img {
+    height: 40px;
+}
+
+.item h2 {
+    margin-top: 8px;
+}
+
+.info {
+    background-color: white;
+    grid-column: 2 / 4;
+}
+
+.container {
+    background-color: var(--container-color);
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    box-shadow: 0 -1px 10px gray;
+}
+
+.nav {
+    margin-top: 5em;
+}
+
+.support {
+    margin-top: 5em;
+}
