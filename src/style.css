@@ -215,6 +215,7 @@ body {
     justify-content: center;
     margin-left: 1.5em;
     margin-top: 1.5em;
+    margin-bottom: 1.5em;
     font-family: "Inter";
 }
 
@@ -269,5 +270,5 @@ body {
 }
 
 .announcements {
-    
+
 }
