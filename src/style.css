@@ -25,6 +25,9 @@
     --panel-color: #e5e7eb;
     --input-color: #cbd5e1;
     --btn-color: #0284c7;
+    --item-color: #a1a1aa;
+    --item-background: #fafaf9;
+    --item-shadow: #57534e;
 }
 
 * {
@@ -41,6 +44,8 @@ body {
     height: 100vh;
     grid-template: 1fr 1fr 3fr / 1fr 2fr 2fr;
 }
+
+/* Navigation */
 
 .navigation {
     display: grid;
@@ -73,6 +78,16 @@ body {
 .item h2 {
     margin-left: 0.5vw;
 }
+
+.nav {
+    margin-top: 5em;
+}
+
+.support {
+    margin-top: 5em;
+}
+
+/* Profile Panel */
 
 .info {
     display: grid;
@@ -185,16 +200,74 @@ body {
 }
 
 .container {
+    display: grid;
     background-image: linear-gradient(to right bottom, var(--panel-color), var(--container-color));
     grid-column: 2 / 4;
     grid-row: 2 / 4;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 12fr;
     box-shadow: 0 -1px 10px var(--input-color);
 }
 
-.nav {
-    margin-top: 5em;
+.container .header {
+    display: flex;
+    grid-column: 1 / 2;
+    justify-content: center;
+    margin-left: 1.5em;
+    margin-top: 1.5em;
+    font-family: "Inter";
 }
 
-.support {
-    margin-top: 5em;
+.projects {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100%;
+    gap: 2em;
+}
+
+.projects .item-project {
+    display: grid;
+    background-color: var(--item-background);
+    border: 2px solid var(--item-shadow);
+    border-radius: 8px;
+    box-shadow: -0.25em 0 0 var(--item-shadow);
+    margin-left: 1.5em;
+    margin-bottom: 1.5em;
+    p {
+        font-family: "Nunito";
+        font-size: 0.8rem;
+        color: var(--item-color)
+    };
+    h4 {
+        font-family: "Inter";
+        font-size: 1;
+        margin-bottom: 0.25em;
+    };
+    div {
+        margin: 1.25em;
+    };
+}
+
+.projects .item-project .icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1em;
+}
+
+.projects .item-project .icon-reaction {
+    margin-right: 1em;
+}
+
+.live-trends {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 1fr 1fr;
+}
+
+.announcements {
+    
 }
